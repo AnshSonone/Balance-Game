@@ -1,13 +1,13 @@
 function RoundResult({data}) {
     
     return (
-        <div className="mt-[20px]">
-            <h3>Round Result</h3>
-            <p>Target (80% of avg): {data.target.toFixed(2)}</p>
-            <p>Winner: {data.winner}</p>
-            <ul>
+        <div className="">
+            <h2 className="h2">Round Result</h2>
+            <h4 className="h4">Target (80% of avg): {data.target.toFixed(2)}</h4>
+            <h5 className="h5">Winner: {data.winner}</h5>
+            <ul className="grid-container">
                 {data.choices.map(p => (
-                    <li key={p.name}>{p.name}: {p.choice}</li>
+                    <p key={p.name} className="">{p.name}: <br/> Predicted : <span className="PredictedScore">{p.choice}</span></p>
                 ))}
             </ul>
         </div>

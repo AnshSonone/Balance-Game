@@ -1,8 +1,98 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;
-
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* background-image: url("/public/back.jpg"); */
+    /* background-repeat: no-repeat;
+    opacity: 10px; */
 }
+
+.submitBtn {
+    margin: 10px;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+
+.InputBox {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.PlayerName {
+    width: 180px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: black;
+    border: solid 2px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.PredictedScore {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .card {
+    padding: 24px;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 8px;
+  }
+
+  .h2 {
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .h4 {
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .h5 {
+    font-size: 15px;
+    background-color: gold;
+  }
+  
+  /* Medium screens (≥768px) = 2 columns */
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Large screens (≥1024px) = 4 columns */
+  @media (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
