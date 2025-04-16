@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import PlayerInput from "./PlayerInput";
 import RoundResult from "./RoundResult";
 
@@ -60,13 +60,13 @@ function Game() {
     }
 
     if (players.length === 1) {
-        return <h2>Game over! Winner: {players[0].name}</h2>
+        return <h2 className="text-4xl font-bold flex justify-center items-center w-screen h-[80vh] ">Game over! Winner: {players[0].name}</h2>
     }
 
     
 
     return (
-        <div className="m-5">
+        <div className="">
             <PlayerInput
                 value={inputValue}
                 onChange={handleInput}
@@ -76,7 +76,7 @@ function Game() {
 
              <div className="grid-container">{
                 players.map(p => (
-                    <p key={p.name} className="PlayerName"> {p.name} <br/> Remaining Chances : {p.hp}</p>
+                    <p key={p.name} className="w-full h-fit flex text-center justify-center rounded-[5px] border-black  border-[2px] p-[20px] mt-[20px] text-xl"> {p.name} <br/> Remaining Chances : {p.hp}</p>
                 ))}</div>
         </div>
     )
